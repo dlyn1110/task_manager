@@ -1,0 +1,27 @@
+<div class="container">
+  <div id="grad1">
+
+    <h2>Sign up for Planner</h2><br>
+
+    <%="<p class='error'>Email has already been taken</p>" if @user && @user.errors.any?%>
+
+      <form class="form-inline" action="/signup" method="POST">
+
+        <div class="form-group">
+          <label>Username:</label>
+          <input type="text" class="form-control" placeholder="Username" name="username">
+        </div>
+
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" class="form-control" placeholder="Email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+  </div>
+</div>
